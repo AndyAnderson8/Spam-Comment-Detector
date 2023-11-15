@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spam Detector - Visualizations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="header"></div>
+  
+    <div class="content">
+      <div class="title text-center">
+        <h1>YouTube Comment Spam Detector</h1>
+        <h2>Data Visualizations</h2>
+      </div>
+
+      <div class="section alt-color">
+        <h2 class="text-center">ROC Curve</h2>
+        <img src="{{ url_for('static', filename='visualizations/roc_curve.png') }}" alt="ROC Curve">
+        <p>
+          <b>Description:</b> The ROC (Receiver Operating Characteristic) Curve visualizes the true positive rate against the false positive rate. It provides insights into the trade-off between sensitivity (true positive rate) and specificity (1 - false positive rate). The area under the ROC curve (AUC) gives a single metric that summarizes the overall performance of the classifier. A perfect classifier would have an AUC of 1, while a random classifier would have an AUC of 0.5.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2 class="text-center">Confusion Matrix</h2>
+        <img src="{{ url_for('static', filename='visualizations/confusion_matrix.png') }}" alt="Confusion Matrix">
+        <p>
+          <b>Description:</b> The Confusion Matrix provides a clear visualization of the model's predictions against the true labels. The main diagonal represents correct predictions, while off-diagonal elements are misclassifications. This matrix is especially useful for understanding the types of errors the model is making.
+        </p>
+      </div>
+
+      <div class="section alt-color">
+        <h2 class="text-center">Feature Importance</h2>
+        <img src="{{ url_for('static', filename='visualizations/feature_importance.png') }}" alt="Feature Importance">
+        <p>
+          <b>Description:</b> This visualization showcases the top features (words in this case) that are indicative of spam or non-spam comments. Positive coefficients indicate a higher likelihood of a comment being spam, while negative coefficients indicate a higher likelihood of a comment being genuine. Understanding these features can provide insights into the nature of spam and the patterns that the model is identifying.
+        </p>
+      </div>
+    </div>
+    
+    <a class="text-center margin-bottom" href="/">Back to Spam Detector</a>
+
+    <div class="footer"></div>
+  </body>
+</html>
